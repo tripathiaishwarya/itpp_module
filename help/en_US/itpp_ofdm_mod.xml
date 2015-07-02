@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="ofdm_mod" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>ofdm_mod</refname>
+
+		<refpurpose>Class for modulating and demodulation of OFDM signals using the FFT.</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>Output = ofdm_mod(int inNfft, int inNcp, int inNupsample=1, const cvec &amp;input)</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+		
+		<simplelist type="vert">
+			<member>Nfft - The size of the FFT. Nfft >= 2</member>
+			<member>Ncp - The length of the cyclic prefix. Ncp must be >=0 and  &lt;=Nfft</member>
+			<member>Nupsample - The upsampling factor (default=1) </member>
+			<member>input - Modulate complex data symbols. Length of input must be an integer multiple of Nfft.  </member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+		
+		<para>
+		
+		Class for modulating and demodulation of OFDM signals using the FFT.
+
+		The modulated signal is normalized taking into account the cyclic prefix.
+		
+		</para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">input = [1+i  -1+i  1-i  -1-i]&#xA;output = ofdm_mod(2,1,1,a)&#xA;output = [1.1547005  1.1547005i  1.1547005  1.1547005  -1.1547005i  1.1547005]</programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>

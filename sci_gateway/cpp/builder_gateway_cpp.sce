@@ -4,6 +4,7 @@ function builder_gw_cpp()
     WITHOUT_AUTO_PUTLHSVAR = %t;
     tbx_build_gateway("itpp_cpp", ..
     ["berc_get_errors","itpp_berc_get_errors";
+	"berc_get_errorrate","sci_berc_get_errorrate";
 	"bpsk_mod","itpp_bpsk_mod";
 	"bpsk_demod","itpp_bpsk_demod";
 	"crc_decode","itpp_crc_decode";
@@ -18,9 +19,19 @@ function builder_gw_cpp()
 	"rrc_shape_symbols","itpp_rrc_shape_symbols";
 	"seq_deinterleaver","itpp_seq_deinterleaver";
 	"seq_interleaver","itpp_seq_interleaver";
+	"block_interleaver","itpp_block_interleaver";
+	"cross_deinterleaver","itpp_cross_deinterleaver";
+	"cross_interleaver","itpp_cross_interleaver";
+	"ofdm_demod","sci_cpp_ofdm_demod";
+	"ofdm_mod","sci_cpp_ofdm_mod";
+	"pam_demod","sci_cpp_pam_demod";
+	"pam_mod","sci_cpp_pam_mod";
+	"qam_demod","sci_cpp_qam_demod";
+	"qam_mod","sci_cpp_qam_mod";
 	],..
 	[
 	"itpp_berc_get_errors.cpp",
+	"sci_berc_get_errorrate.cpp",
 	"itpp_bpsk_mod.cpp",
 	"itpp_bpsk_demod.cpp",
 	"itpp_crc_decode.cpp",
@@ -35,6 +46,15 @@ function builder_gw_cpp()
 	"itpp_rrc_shape_symbols.cpp",
 	"itpp_seq_deinterleaver.cpp",
 	"itpp_seq_interleaver.cpp",
+	"itpp_block_interleaver.cpp",
+	"itpp_cross_deinterleaver.cpp",
+	"itpp_cross_interleaver.cpp",
+	"sci_cpp_ofdm_demod.cpp",
+	"sci_cpp_ofdm_mod.cpp",
+	"sci_cpp_pam_demod.cpp",
+	"sci_cpp_pam_mod.cpp",
+	"sci_cpp_qam_demod.cpp",
+	"sci_cpp_qam_mod.cpp",
 	],..
     get_absolute_file_path("builder_gateway_cpp.sce"), [], "-litpp");
 

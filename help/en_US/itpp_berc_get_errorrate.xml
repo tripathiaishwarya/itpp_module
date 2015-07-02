@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="berc_get_errorrate" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>berc_get_errorrate</refname>
+
+		<refpurpose>Bit Error Rate Counter (BERC) Class</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>
+		BERC berc(int indelay=0, int inignorefirst=0, int inignorelast=0);
+	        berc.count(const bvec &amp;in1, const bvec &amp;in2)
+		result = berc.get_errors();
+		</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+		
+		<simplelist type="vert">
+			<member>indelay - delay is positive if in2 is a delayed replica of in1 and negative otherwise.</member>
+			<member>inignorefirst - Used if errors in the begining are to be ignored.</member>
+			<member>inignorelast - Used if errors in the end are to be ignored.</member>
+			<member>in1 - Input signal 1</member>
+			<member>in2 - Input signal 2</member>
+			<member>Result - Returns estimated bit error rate between in1 and in2</member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+
+		<para>
+		Bit Error Rate Counter (BERC) Class
+		</para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">in1 = [1 0 1 1]&#xA;in2 = [1 1 1 1]&#xA;result = berc_get_errorrate(0, 0, 0, in1, in2)&#xA;result = 0.25</programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>

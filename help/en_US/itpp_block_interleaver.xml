@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="block_interleaver" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>itpp_block_interleaver</refname>
+
+		<refpurpose>Function for block interleaving. Adds some zeros. </refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>Vec&lt; T &gt; block_interleave(int in_rows, int in_cols, const Vec&lt; T &gt; &amp;input)</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+		
+		<simplelist type="vert">
+			<member>in_rows - Set the number of rows for block interleaving</member>
+			<member>in_cols - Set the number of columns for block interleaving</member>
+			<member>input - Input Vector</member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+		<para>Block Interleaver Class.
+
+Data is written row-wise and read column-wise when interleaving. </para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">
+		a = [1 -1 1 1]&#xA;  
+		b = block_interleave(2,2,a)&#xA;
+		b = [1 1 -1 1]&#xA;
+		</programlisting>
+
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>

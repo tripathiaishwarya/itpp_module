@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="qam_mod" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>qam_mod</refname>
+
+		<refpurpose>M-ary QAM modulator with real symbols</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>ModulatedVec = qam_mod(int M, const cvec &amp;bits)</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+		
+		<simplelist type="vert">
+			<member>M - Set the size of the signal constellation</member>
+			<member>bits - Input Bit Vector to modulate</member>
+			<member>ModulatedVec - Modulated Complex Vector returned</member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+
+		<para>
+		M-ary QAM modulator with square lattice.
+
+		The size of the QAM constellation is <latex>$M = 2^k$</latex>, where <latex>$k = 1, 2, \ldots $</latex>. Symbol values in each dimension are: <latex>$\{-(\sqrt{M}-1), \ldots, -3, -1, 1, 3, \ldots, (\sqrt{M}-1)\}$</latex>. The bitmap is Gray encoded. Symbols are normalized so that the average energy is 1. That is, normalized with <latex>$\sqrt{2(M-1)/3}$</latex>
+		
+		</para>
+		
+		<para>M must be some square of 2</para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">a = [1 0 1 1]&#xA;b = qam_mod(4,a)&#xA;Output = [0.7071068 - 0.7071068i  - 0.7071068 - 0.7071068i]</programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>
