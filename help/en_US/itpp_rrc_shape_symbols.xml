@@ -27,7 +27,7 @@
 			<varlistentry><term>a:</term>
 				<listitem><para> Output pulse shape vector.</para></listitem></varlistentry>      
 			<varlistentry><term>b:</term>        
-				<listitem><para> Input symbols vec of {-1,1}.</para></listitem></varlistentry>
+				<listitem><para> Input symbols vec .</para></listitem></varlistentry>
                          <varlistentry><term>c:</term>        
 				<listitem><para> Roll off factor(non zero).</para></listitem></varlistentry>   
 			<varlistentry><term>d:</term>        
@@ -47,7 +47,7 @@
 	
 		<para>The function shape_symbols() shapes the the input symbols performing upsampling.</para>
 
-		<para> It is expected that the user inputs input symbols vector of {1,-1,} roll off factor, filter length and upsampling factor in scilab engine while calling the rrc_shape_symbols() function and expect the function to return pulse shape vector as output in scilab console.
+		<para> It is expected that the user inputs input symbols vector, roll off factor, filter length and upsampling factor in scilab engine while calling the rrc_shape_symbols() function and expect the function to return pulse shape vector as output in scilab console.
 		</para>
 		
 	</refsection>

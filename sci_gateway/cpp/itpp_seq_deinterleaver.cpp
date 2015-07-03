@@ -107,16 +107,6 @@ int itpp_seq_deinterleaver(char *fname, unsigned long fname_len)
 		return 0;
 	}
 	
-	/*//Checking if the input signal is digital type
-	for( i = 0 ; i < m1*n1 ; i++ )
-	{
-		if( (matrixOfInputSymbols[i] != -1) && (matrixOfInputSymbols[i] != 1) )
-		{
-			Scierror(999, _("%s: Digital Input Signal Expected.\n"), fname, 1);
-			return 0;
-		}
-	}*/
-
 
 	//------------------------------For second arguement(In Interleaver depth)-------------------------------
 

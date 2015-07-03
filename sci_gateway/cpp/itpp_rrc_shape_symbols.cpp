@@ -19,7 +19,7 @@ June 10,2015
 *
 * Input/Output Details : 
 *----------------------
-* It is expected that the user inputs input symbols vector of {1,-1,} roll off factor, filter length and upsampling factor in scilab
+* It is expected that the user inputs input symbols vector roll off factor, filter length and upsampling factor in scilab
 * engine while calling the rrc_shape_symbols() function and expect the function to return pulse shape vector as output in scilab console.
 */
 
@@ -162,7 +162,7 @@ int itpp_rrc_shape_symbols(char *fname, unsigned long fname_len)
 	}
 	
 
-	//Checking if the input signal is BPSK modulated type
+	/*//Checking if the input signal is BPSK modulated type
 	for( i = 0 ; i < m1*n1 ; i++ )
 	{
 		if( (matrixOfInputSymbols[i] != -1) && (matrixOfInputSymbols[i] != 1) )
@@ -170,7 +170,7 @@ int itpp_rrc_shape_symbols(char *fname, unsigned long fname_len)
 			Scierror(999, _("%s: {1, -1} Input Signal Expected.\n"), fname, 1);
 			return 0;
 		}
-	}
+	}*/
 	
 
 
