@@ -7,7 +7,7 @@ Pratik Kapoor
 Example
 
 a = [1+i  -1+i  1-i  -1-i]
-b = ofdm_mod(2,1,1,a);
+b = itpp_ofdm_mod(2,1,1,a);
 b = [1.1547005  1.1547005i  1.1547005  1.1547005  -1.1547005i  1.1547005]
 ----------------------------------------------------------------------------------------------------------------*/
 
@@ -110,12 +110,26 @@ extern "C"
 			return 0;
 		}
 		
+		// Nfft >= 2
 		if((int)*inNfftMatrix<2) 
 		{
-			Scierror(2, _("%s: Nfft<=2.\n"), fname, 1);
+			Scierror(2, _("%s: Nfft must be >= 2.\n"), fname, 1);
 			return 0;
 		}
 		
+		// OFDM: Ncp must be >=0 and <=Nfft
+		if((int)*inNcpMatrix<0 || (int)*inNcpMatrix>(int)*inNfftMatrix) 
+		{
+			Scierror(2, _("%s: Ncp must be >=0 and <=Nfft.\n"), fname, 1);
+			return 0;
+		}
+		
+		// Length of input must be an integer multiple of Nfft.
+		if( m%((int)*inNfftMatrix)!=0 && n%((int)*inNfftMatrix)!=0 ) 
+		{
+			Scierror(2, _("%s: Length of input must be an integer multiple of Nfft.\n"), fname, 1);
+			return 0;
+		}
 		
 		//----------------------------------WORKING OF FUNCTION-------------------------//
 		

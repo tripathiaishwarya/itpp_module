@@ -7,7 +7,7 @@ Pratik Kapoor
 Example
 
 a = [1 -1 1 1]  
-b = cross_interleaver(2,a)
+b = itpp_cross_interleave(2,a)
 b = [1 0 1 -1 0 1 0 0]
 ----------------------------------------------------------------------------------------------------------------*/
 
@@ -92,6 +92,20 @@ extern "C"
 	    	/*=================================================================*/
 	    	// Input Error Checks
 		/*=================================================================*/
+		
+		//Checking if input signal is a vector
+		if((m1!=1) && (n1!=1)) 
+		{
+			Scierror(2, _("%s: Single row or column vector expected.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*inorderMatrix - floor(*inorderMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for inorder.\n"), fname, 1);
+			return 0;
+		}
+		
 		
 		//----------------------------------WORKING OF FUNCTION-------------------------//
 		

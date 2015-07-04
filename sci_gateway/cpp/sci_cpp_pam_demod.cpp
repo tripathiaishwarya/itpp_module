@@ -100,6 +100,26 @@ extern "C"
 			return 0;
 		}
 		
+		//Checking if m is not an integer
+		if((*setmMatrix - floor(*setmMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for M.\n"), fname, 1);
+			return 0;
+		}
+		
+		//To check if M is some power of 2
+		i=1;
+		while(1)
+		{
+			i *= 2;
+			if( (int)*setmMatrix == i)
+				break;
+			if( (int)*setmMatrix < i)
+			{
+				Scierror(999, _("%s: M should be a power of 2.\n"), fname, 1);
+				return 0;
+			}
+		}
 		
 		//----------------------------------WORKING OF FUNCTION-------------------------//
 		

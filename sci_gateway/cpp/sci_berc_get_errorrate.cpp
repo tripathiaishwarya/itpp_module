@@ -8,7 +8,7 @@ Example
 
 in1 = [1 0 1 1]
 in2 = [1 1 1 1]
-result = berc_get_errorrate(0, 0, 0, in1, in2)
+result = itpp_berc_get_errorrate(0, 0, 0, in1, in2)
 result = 0.25
 ----------------------------------------------------------------------------------------------------------------*/
 
@@ -108,9 +108,33 @@ extern "C"
 	    	}
 	    	
 	    	//Checking if input signal is a vector
-		if((m!=1) && (n!=1)) 
+		if((m3!=1) && (n3!=1)) 
 		{
-			Scierror(2, _("%s: Single row or column vector expected.\n"), fname, 1);
+			Scierror(2, _("%s: Single row or column vector expected for Input 1.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((m4!=1) && (n4!=1)) 
+		{
+			Scierror(2, _("%s: Single row or column vector expected for Input 2.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*inignorefirstMatrix - floor(*inignorefirstMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for inignorefirst.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*inignorelastMatrix - floor(*inignorelastMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for inignorelast.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*indelayMatrix - floor(*indelayMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for indelay.\n"), fname, 1);
 			return 0;
 		}
 		

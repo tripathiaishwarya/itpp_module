@@ -7,7 +7,7 @@ Pratik Kapoor
 Example
 
 v = [1 0 1 -1 0 1 0 0]
-b = cross_deinterleaver(2,a,1)
+b = itpp_cross_deinterleave(2,a,1)
 b = [0 0 1 -1 1 1 0 0 0 0 0 0]
 ----------------------------------------------------------------------------------------------------------------*/
 
@@ -97,6 +97,25 @@ extern "C"
 	    	// Input Error Checks
 		/*=================================================================*/
 		
+		//Checking if input signal is a vector
+		if((m1!=1) && (n1!=1)) 
+		{
+			Scierror(2, _("%s: Single row or column vector expected.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*inorderMatrix - floor(*inorderMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for inorder.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*keepzerosMatrix!=0 && *keepzerosMatrix!=1)
+		{
+			Scierror(999, _("%s: 0 or 1 input expected for keepzeros.\n"), fname, 1);
+			return 0;
+		}
+		
 		//----------------------------------WORKING OF FUNCTION-------------------------//
 		
 		vec inputVector;
@@ -105,7 +124,7 @@ extern "C"
 		
 		/*=================================================================*/
 		// Cross_Interleaver (int in_order)
-		// Vec< T > interleave (const Vec< T > &input)
+		// Vec< T > deinterleave (const Vec< T > &input,short keepzeros=0)
 		// Calling the required IT++ function
 		
 		outputVector = Cross_Interleaver<double>((double)*inorderMatrix).deinterleave(inputVector,(double)*keepzerosMatrix);

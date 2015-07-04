@@ -5,7 +5,7 @@ Pratik Kapoor
 
 /*----------------------------------------------------------------------------------------------------------------
 input = [1.1547005  1.1547005i  1.1547005  1.1547005  -1.1547005i  1.1547005]
-output = ofdm_demod(2,1,1,a)
+output = itpp_ofdm_mod(2,1,1,a)
 output = [1+i  -1+i  1-i  -1-i]
 ----------------------------------------------------------------------------------------------------------------*/
 
@@ -105,6 +105,27 @@ extern "C"
 		if((m!=1) && (n!=1)) 
 		{
 			Scierror(2, _("%s: Single row or column vector expected.\n"), fname, 1);
+			return 0;
+		}
+		
+		// Nfft >= 2
+		if((int)*inNfftMatrix<2) 
+		{
+			Scierror(2, _("%s: Nfft must be >= 2.\n"), fname, 1);
+			return 0;
+		}
+		
+		// OFDM: Ncp must be >=0 and <=Nfft
+		if((int)*inNcpMatrix<0 || (int)*inNcpMatrix>(int)*inNfftMatrix) 
+		{
+			Scierror(2, _("%s: Ncp must be >=0 and <=Nfft.\n"), fname, 1);
+			return 0;
+		}
+		
+		// Length of input must be an integer multiple of Nfft+Ncp.
+		if( m%((int)*inNfftMatrix + (int)*inNcpMatrix)!=0 && n%((int)*inNfftMatrix + (int)*inNcpMatrix)!=0 ) 
+		{
+			Scierror(2, _("%s: Length of input must be an integer multiple of Nfft+Ncp.\n"), fname, 1);
 			return 0;
 		}
 		

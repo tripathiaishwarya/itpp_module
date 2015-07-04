@@ -7,7 +7,7 @@ Pratik Kapoor
 Example
 
 a = [1 -1 1 1]
-b = block_interleaver(2,2,a)
+b = itpp_block_interleave(2,2,a)
 b = [1 1 -1 1]
 ----------------------------------------------------------------------------------------------------------------*/
 
@@ -96,6 +96,24 @@ extern "C"
 	    	/*=================================================================*/
 	    	// Input Error Checks
 		/*=================================================================*/
+		//Checking if input signal is a vector
+		if((m2!=1) && (n2!=1)) 
+		{
+			Scierror(2, _("%s: Single row or column vector expected.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*rowsMatrix - floor(*rowsMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for rows.\n"), fname, 1);
+			return 0;
+		}
+		
+		if((*colsMatrix - floor(*colsMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for columns.\n"), fname, 1);
+			return 0;
+		}
 		
 		//----------------------------------WORKING OF FUNCTION-------------------------//
 		

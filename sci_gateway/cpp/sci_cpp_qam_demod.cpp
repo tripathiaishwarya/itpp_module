@@ -91,10 +91,31 @@ extern "C"
 	    	}
 	    	
 	    	//Checking if input signal is a vector
-		if((m1!=1) && (n1!=1)) 
+		if((m!=1) && (n!=1)) 
 		{
 			Scierror(2, _("%s: Single row or column vector expected.\n"), fname, 1);
 			return 0;
+		}
+		
+		//Checking if m is not an integer
+		if((*setmMatrix - floor(*setmMatrix)) != 0)
+		{
+			Scierror(999, _("%s: Integer input expected for M.\n"), fname, 1);
+			return 0;
+		}
+		
+		//To check if M is even power of 2
+		i=1;
+		while(1)
+		{
+			i *= 4;
+			if( (int)*setmMatrix == i)
+				break;
+			if( (int)*setmMatrix < i)
+			{
+				Scierror(999, _("%s: M should be an even power of 2.\n"), fname, 1);
+				return 0;
+			}
 		}
 		
 		

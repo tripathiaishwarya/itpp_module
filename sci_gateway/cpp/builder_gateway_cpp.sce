@@ -28,6 +28,9 @@ function builder_gw_cpp()
 	"pam_mod","sci_cpp_pam_mod";
 	"qam_demod","sci_cpp_qam_demod";
 	"qam_mod","sci_cpp_qam_mod";
+	"rc_get_pulse_shape","rc_get_pulse_shape";
+	"rc_set_pulse_shape","rc_set_pulse_shape";
+	"rc_shape_symbols","rc_shape_symbols";
 	],..
 	[
 	"itpp_berc_get_errors.cpp",
@@ -55,6 +58,9 @@ function builder_gw_cpp()
 	"sci_cpp_pam_mod.cpp",
 	"sci_cpp_qam_demod.cpp",
 	"sci_cpp_qam_mod.cpp",
+	"rc_get_pulse_shape.cpp",
+	"rc_set_pulse_shape.cpp",
+	"rc_shape_symbols.cpp",
 	],..
     get_absolute_file_path("builder_gateway_cpp.sce"), [], "-litpp");
 
