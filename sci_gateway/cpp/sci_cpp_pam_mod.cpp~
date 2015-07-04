@@ -128,7 +128,7 @@ extern "C"
 				break;
 			if( (int)*setmMatrix < i)
 			{
-				Scierror(999, _("%s: M should be a power of 2.\n"), fname, 1);
+				Scierror(999, _("%s: Second input should be a power of 2.\n"), fname, 1);
 				return 0;
 			}
 		}

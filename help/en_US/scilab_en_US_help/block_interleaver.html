@@ -1,0 +1,87 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>itpp_block_interleaver</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="berc_get_errors.html">&lt;&lt; berc_get_errors</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_e8ca2274fc25a241cc15a8d686bd7cdf.html">ITPP Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="bpsk_demod.html">bpsk_demod &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">ITPP Toolbox</a> &gt;&gt; <a href="section_e8ca2274fc25a241cc15a8d686bd7cdf.html">ITPP Toolbox</a> &gt; itpp_block_interleaver</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">itpp_block_interleaver</h1>
+
+		<p class="refpurpose">Function for block interleaving. Adds some zeros.</p></div>
+
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+
+		<div class="synopsis"><pre><span class="default">Vec</span>&lt; <span class="default">T</span> &gt; <span class="default">block_interleave</span><span class="default">(</span><span class="default">int</span> <span class="default">in_rows</span><span class="default">, </span><span class="default">int</span> <span class="default">in_cols</span><span class="default">, </span><span class="default">const</span> <span class="default">Vec</span>&lt; <span class="default">T</span> &gt; &amp;<span class="default">input</span><span class="default">)</span></pre></div></div>
+	
+	<div class="refsynopsisdiv"><h3 class="title">Arguments</h3>
+		
+		<ul class="itemizedlist"><li class="member">in_rows - Set the number of rows for block interleaving</li>
+			<li class="member">in_cols - Set the number of columns for block interleaving</li>
+			<li class="member">input - Input Vector</li></ul></div>
+	
+	<div class="refsection"><h3 class="title">Description</h3>
+		<p class="para">Block Interleaver Class.
+
+Data is written row-wise and read column-wise when interleaving.</p></div>
+
+	<div class="refsection"><h3 class="title">Examples</h3>
+
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">a</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilaboperator">-</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span>
+
+<span class="scilabid">b</span> <span class="scilaboperator">=</span> <span class="scilabid">block_interleave</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabid">a</span><span class="scilabopenclose">)</span>
+
+<span class="scilabid">b</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilaboperator">-</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+	<div class="refsection"><h3 class="title">Authors</h3>
+
+		<ul class="itemizedlist"><li class="member">Pratik Kapoor</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="berc_get_errors.html">&lt;&lt; berc_get_errors</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_e8ca2274fc25a241cc15a8d686bd7cdf.html">ITPP Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="bpsk_demod.html">bpsk_demod &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>
