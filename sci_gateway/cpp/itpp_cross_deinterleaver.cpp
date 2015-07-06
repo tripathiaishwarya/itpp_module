@@ -110,7 +110,7 @@ extern "C"
 			return 0;
 		}
 		
-		if((*keepzerosMatrix!=0 && *keepzerosMatrix!=1)
+		if((*keepzerosMatrix!=0 && *keepzerosMatrix!=1))
 		{
 			Scierror(999, _("%s: 0 or 1 input expected for keepzeros.\n"), fname, 1);
 			return 0;

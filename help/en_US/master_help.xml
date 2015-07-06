@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY aa98ca9994c989aa6aa88540ed1a04448 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/berawgn.xml">
+<!ENTITY afe64b4370242190bc473c38181bbdc3c SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/bsc.xml">
+<!ENTITY ae2ae7c8d47436612ed22769a028f3733 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_berc_get_errorrate.xml">
+<!ENTITY a72cadd771c74728a8056d2333c014fdc SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_berc_get_errors.xml">
+<!ENTITY aa2453ab09088f0d32932506b60b818c7 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_block_interleaver.xml">
+<!ENTITY ab80a7ae5708b97e5d055d15a8f992cba SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_bpsk_demod.xml">
+<!ENTITY afeeac10be80b7fd46c3b3c0db75fd6fa SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_bpsk_mod.xml">
+<!ENTITY a2f0f1920cfc6f06f5ae620b63d5c2dcf SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_crc_decode.xml">
+<!ENTITY a96ab94e2752b7be6156c5e4f2b19d57f SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_crc_encode.xml">
+<!ENTITY a7b10c39345a030aba11630fb6efdca05 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_cross_deinterleaver.xml">
+<!ENTITY a44acd4646574de4ffaafe6fc309b8751 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_cross_interleaver.xml">
+<!ENTITY a471f0f04fbaab1a269c95b84b267fb4e SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_hamm_decode.xml">
+<!ENTITY a8c5079420d5a4687873e363f5b5c5f60 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_hamm_encode.xml">
+<!ENTITY a5d08cecad4e19d58101a6d4010784e0d SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_ofdm_demod.xml">
+<!ENTITY ae5b965c52d6c932fbc7665bc29574697 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_ofdm_mod.xml">
+<!ENTITY a859067fb645d3becfb70360066dc59fa SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_pam_demod.xml">
+<!ENTITY a2a705085d72857f39759938c7ef6c21a SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_pam_mod.xml">
+<!ENTITY a489aa9bc7bafb6da37dcf52d183bd32a SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_psk_demod.xml">
+<!ENTITY a463071372ce0137eb8616fca6c544a93 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_psk_mod.xml">
+<!ENTITY a5b3ff702fbc7a33a45e1568b00f99720 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_qam_demod.xml">
+<!ENTITY aa762d7588393207e7da160448e58ecef SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_qam_mod.xml">
+<!ENTITY ade964cdda74166ed865e5a2a7af8ab4f SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_qpsk_demod.xml">
+<!ENTITY af0f24121cfaefe2fa359e45e9f094628 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_qpsk_mod.xml">
+<!ENTITY a017c2508c9f13eec6a12b3cc3ab67add SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_rc_getpulseshape.xml">
+<!ENTITY ae47ae68abce99bb3ad365e4d6b540c9a SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_rc_setpulseshape.xml">
+<!ENTITY aaec2b54472fbe6b191ad3a978fcfbc05 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_rrc_get_pulse_shape.xml">
+<!ENTITY adfc3da5819cc85ad773de66b10d0b20f SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_rrc_shape_symbols.xml">
+<!ENTITY a357bd2a8cbb64ddba8c9634816656c4e SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_seq_deinterleaver.xml">
+<!ENTITY aad422091e8202fa3434d91ff1405c668 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_seq_interleaver.xml">
+<!ENTITY a9a6afc9974f04de6e63b972c7e478877 SYSTEM "/home/pratik/Documents/itpp_module/help/en_US/itpp_shape_symbols.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='itpp_toolbox_manual'>
+    <title>ITPP Toolbox</title>
+  </info>
+
+<part xml:id='section_82d6a792eeab08a15ff7dbb082a2a045'>
+<title>ITPP Toolbox</title>
+&aa98ca9994c989aa6aa88540ed1a04448;
+&afe64b4370242190bc473c38181bbdc3c;
+&ae2ae7c8d47436612ed22769a028f3733;
+&a72cadd771c74728a8056d2333c014fdc;
+&aa2453ab09088f0d32932506b60b818c7;
+&ab80a7ae5708b97e5d055d15a8f992cba;
+&afeeac10be80b7fd46c3b3c0db75fd6fa;
+&a2f0f1920cfc6f06f5ae620b63d5c2dcf;
+&a96ab94e2752b7be6156c5e4f2b19d57f;
+&a7b10c39345a030aba11630fb6efdca05;
+&a44acd4646574de4ffaafe6fc309b8751;
+&a471f0f04fbaab1a269c95b84b267fb4e;
+&a8c5079420d5a4687873e363f5b5c5f60;
+&a5d08cecad4e19d58101a6d4010784e0d;
+&ae5b965c52d6c932fbc7665bc29574697;
+&a859067fb645d3becfb70360066dc59fa;
+&a2a705085d72857f39759938c7ef6c21a;
+&a489aa9bc7bafb6da37dcf52d183bd32a;
+&a463071372ce0137eb8616fca6c544a93;
+&a5b3ff702fbc7a33a45e1568b00f99720;
+&aa762d7588393207e7da160448e58ecef;
+&ade964cdda74166ed865e5a2a7af8ab4f;
+&af0f24121cfaefe2fa359e45e9f094628;
+&a017c2508c9f13eec6a12b3cc3ab67add;
+&ae47ae68abce99bb3ad365e4d6b540c9a;
+&aaec2b54472fbe6b191ad3a978fcfbc05;
+&adfc3da5819cc85ad773de66b10d0b20f;
+&a357bd2a8cbb64ddba8c9634816656c4e;
+&aad422091e8202fa3434d91ff1405c668;
+&a9a6afc9974f04de6e63b972c7e478877;
+</part>
+</book>

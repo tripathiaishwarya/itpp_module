@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="berawgn" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>BERAWGN</refname>
+
+		<refpurpose>Bit error rate (BER) for uncoded AWGN channels</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>
+		ber = berawgn(Ebno, scheme) &#xA;Returns the BER of uncoded BPSK over an AWGN channel with coherent demodulation.
+		</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+		
+		<simplelist type="vert">
+			<member>EbNo - The ratio of bit energy to noise power spectral density, in dB. If EbNo is a vector, the output ber is a vector of the same size, whose elements correspond to the different Eb/N0 levels.</member>
+			<member>Scheme - Modulation scheme</member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+
+		<para>
+		The berawgn function returns the BER of various modulation schemes over an additive white Gaussian noise (AWGN) channel
+		</para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">berawgn([3 1.6],'bpsk')&#xA;ber = [0.0071529    0.0368191]&#xA;</programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>

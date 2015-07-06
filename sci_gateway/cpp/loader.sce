@@ -35,6 +35,17 @@ list_functions = [ 'berc_get_errors';
                    'pam_mod';
                    'qam_demod';
                    'qam_mod';
+                   'rc_get_pulse_shape';
+                   'rc_set_pulse_shape';
+                   'rc_shape_symbols';
+                   'bch_dec';
+                   'bch_enc';
+                   'conv_dec';
+                   'conv_enc';
+                   'despread';
+                   'spread';
+                   'rsdec';
+                   'rsenc';
 ];
 addinter(libitpp_cpp_path + filesep() + 'libitpp_cpp' + getdynlibext(), 'libitpp_cpp', list_functions);
 // remove temp. variables on stack

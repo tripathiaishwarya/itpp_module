@@ -31,6 +31,17 @@ extern Gatefunc sci_cpp_pam_demod;
 extern Gatefunc sci_cpp_pam_mod;
 extern Gatefunc sci_cpp_qam_demod;
 extern Gatefunc sci_cpp_qam_mod;
+extern Gatefunc rc_get_pulse_shape;
+extern Gatefunc rc_set_pulse_shape;
+extern Gatefunc rc_shape_symbols;
+extern Gatefunc sci_bch_dec;
+extern Gatefunc sci_bch_enc;
+extern Gatefunc sci_conv_dec;
+extern Gatefunc sci_conv_enc;
+extern Gatefunc sci_despread;
+extern Gatefunc sci_spread;
+extern Gatefunc sci_rsdec;
+extern Gatefunc sci_rsenc;
 static GenericTable Tab[]={
   {(Myinterfun)sci_gateway_without_putlhsvar,itpp_berc_get_errors,"berc_get_errors"},
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_berc_get_errorrate,"berc_get_errorrate"},
@@ -57,6 +68,17 @@ static GenericTable Tab[]={
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_cpp_pam_mod,"pam_mod"},
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_cpp_qam_demod,"qam_demod"},
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_cpp_qam_mod,"qam_mod"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,rc_get_pulse_shape,"rc_get_pulse_shape"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,rc_set_pulse_shape,"rc_set_pulse_shape"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,rc_shape_symbols,"rc_shape_symbols"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_bch_dec,"bch_dec"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_bch_enc,"bch_enc"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_conv_dec,"conv_dec"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_conv_enc,"conv_enc"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_despread,"despread"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_spread,"spread"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_rsdec,"rsdec"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_rsenc,"rsenc"},
 };
  
 int C2F(libitpp_cpp)()

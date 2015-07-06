@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="rc_shape_symbols" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>rc_shape_symbols</refname>
+
+		<refpurpose>Raised Cosine (RC) Pulse Shaper.</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>Vec = itpp_shape_symbols(double roll_off, int filter_length=6, int upsampling_factor=8, const Vec&lt; T1 &gt; &amp;input)</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+
+		<simplelist type="vert">
+			<member>roll_off - Roll-Off Factor. Must be between 0 and 1.</member>
+			<member>filter_length - Filter Length. Must be even.</member>
+			<member>upsampling_factor - Upsampling Factor</member>
+			<member>input - Input symbols to shape</member>
+			<member>Vec - Shaped pulse</member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+		<para>Shape the input symbols performing upsampling. </para>
+		
+		<title>Class Description</title>
+
+		<para>Raised Cosine (RC) Pulse Shaper.
+
+		Upsamples and shapes symbols as raised cosine pulses with a given roll-off factor <latex>$ \alpha $</latex>. The raised cosine pulse shape is defined as:
+
+
+		    <latex>
+		      \begin{eqnarray}
+		      \[ p(t) = \frac{\sin(\pi t / T)}{\pi t / T} \frac{\cos(\alpha \pi t / T)}{1 - (2 \alpha t / T)^2} \]
+		      \end{eqnarray}
+		    </latex>
+   		
+		</para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">a = [1 -1 1 1]&#xA;
+		b = itpp_shape_symbols(0.5,6,8,a)&#xA;
+		b = 8.951D-34    0.0011377    0.0047728    0.0105661    0.0171489    0.0221856    0.0227496  
+		 
+		    0.0159920  - 1.299D-17  - 0.0264666  - 0.0623855  - 0.1022829  - 0.1371911  - 0.1556013  
+		 
+		  - 0.1452514  - 0.0955170    4.361D-17    0.1423460    0.3248893    0.5312656    0.7374019  
+		 
+		    0.9143499    1.0324875    1.0664587    1.    0.8308710    0.5718924    0.2486151  - 0.1028933  
+		     
+		  - 0.4409959  - 0.7244844  - 0.9185954</programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>

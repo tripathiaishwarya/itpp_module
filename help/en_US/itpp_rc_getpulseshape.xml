@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="rc_get_pulse_shape" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>rc_get_pulse_shape</refname>
+
+		<refpurpose>Raised Cosine (RC) Pulse Shaper.</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>Vec = itpp_raisedcosine_getpulseshape(double roll_off, int filter_length=6, int upsampling_factor=8)</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+
+		<simplelist type="vert">
+			<member>roll_off - Roll-Off Factor. Must be between 0 and 1.</member>
+			<member>filter_length - Filter Length. Must be even.</member>
+			<member>upsampling_factor - Upsampling Factor</member>
+			<member>Vec - Pulse Shape</member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+
+		<para>Raised Cosine (RC) Pulse Shaper.
+
+		Upsamples and shapes symbols as raised cosine pulses with a given roll-off factor <latex>$ \alpha $</latex>. The raised cosine pulse shape is defined as:
+
+
+		    <latex>
+		      \begin{eqnarray}
+		      \[ p(t) = \frac{\sin(\pi t / T)}{\pi t / T} \frac{\cos(\alpha \pi t / T)}{1 - (2 \alpha t / T)^2} \]
+		      \end{eqnarray}
+		    </latex>
+   		
+		</para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">b = itpp_raisedcosine_getpulseshape(0.5,6,8)</programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>

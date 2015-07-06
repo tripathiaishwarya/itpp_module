@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="bsc" xml:lang="en"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>BSC</refname>
+
+		<refpurpose>Binary Symmetric Channel</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>
+		outputdata = bsc(data,p)
+		</synopsis>
+	</refsynopsisdiv>
+	
+	<refsynopsisdiv>
+		<title>Arguments</title>
+		
+		<simplelist type="vert">
+			<member>data - Input signal data</member>
+			<member>p - Probability of bit error</member>
+		</simplelist>
+		
+	</refsynopsisdiv>
+	
+	<refsection>
+		<title>Description</title>
+
+		<para>
+		ndata = bsc(data,p) passes the binary input signal data through a binary symmetric channel with error probability p. The channel introduces a bit error with probability p, processing each element of data independently. 
+		</para>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+
+		<programlisting role="example">bsc([1 0 1 1],0.3)&#xA;ans = [1 0 1 1]&#xA;</programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Pratik Kapoor</member>
+		</simplelist>
+	</refsection>
+</refentry>

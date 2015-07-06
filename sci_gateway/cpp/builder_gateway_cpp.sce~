@@ -1,0 +1,85 @@
+// Builder gateway function for BPSK Demodulation 
+
+function builder_gw_cpp()
+    WITHOUT_AUTO_PUTLHSVAR = %t;
+    tbx_build_gateway("itpp_cpp", ..
+    ["berc_get_errors","itpp_berc_get_errors";
+	"berc_get_errorrate","sci_berc_get_errorrate";
+	"bpsk_mod","itpp_bpsk_mod";
+	"bpsk_demod","itpp_bpsk_demod";
+	"crc_decode","itpp_crc_decode";
+	"crc_encode","itpp_crc_encode";
+	"hamm_decode","itpp_hamm_decode";
+	"hamm_encode","itpp_hamm_encode";
+	"psk_demod","itpp_psk_demod";
+	"psk_mod","itpp_psk_mod";
+	"qpsk_demod","itpp_qpsk_demod";
+	"qpsk_mod","itpp_qpsk_mod";
+	"rrc_get_pulse_shape","itpp_rrc_get_pulse_shape";
+	"rrc_shape_symbols","itpp_rrc_shape_symbols";
+	"seq_deinterleaver","itpp_seq_deinterleaver";
+	"seq_interleaver","itpp_seq_interleaver";
+	"block_interleaver","itpp_block_interleaver";
+	"cross_deinterleaver","itpp_cross_deinterleaver";
+	"cross_interleaver","itpp_cross_interleaver";
+	"ofdm_demod","sci_cpp_ofdm_demod";
+	"ofdm_mod","sci_cpp_ofdm_mod";
+	"pam_demod","sci_cpp_pam_demod";
+	"pam_mod","sci_cpp_pam_mod";
+	"qam_demod","sci_cpp_qam_demod";
+	"qam_mod","sci_cpp_qam_mod";
+	"rc_get_pulse_shape","rc_get_pulse_shape";
+	"rc_set_pulse_shape","rc_set_pulse_shape";
+	"rc_shape_symbols","rc_shape_symbols";
+	"bch_dec","sci_bch_dec";
+	//"bch_enc","sci_bch_enc";
+	//"conv_dec","sci_conv_dec";
+	//"conv_enc","sci_conv_enc";
+	//"despread","sci_despread";
+	//"spread","sci_spread";
+	//"rsdec","sci_rsdec";
+	//"rsenc","sci_rsenc";
+	],..
+	[
+	"itpp_berc_get_errors.cpp",
+	"sci_berc_get_errorrate.cpp",
+	"itpp_bpsk_mod.cpp",
+	"itpp_bpsk_demod.cpp",
+	"itpp_crc_decode.cpp",
+	"itpp_crc_encode.cpp",
+	"itpp_hamm_decode.cpp",
+	"itpp_hamm_encode.cpp",
+	"itpp_psk_demod.cpp",
+	"itpp_psk_mod.cpp",
+	"itpp_qpsk_demod.cpp",
+	"itpp_qpsk_mod.cpp",
+	"itpp_rrc_get_pulse_shape.cpp",
+	"itpp_rrc_shape_symbols.cpp",
+	"itpp_seq_deinterleaver.cpp",
+	"itpp_seq_interleaver.cpp",
+	"itpp_block_interleaver.cpp",
+	"itpp_cross_deinterleaver.cpp",
+	"itpp_cross_interleaver.cpp",
+	"sci_cpp_ofdm_demod.cpp",
+	"sci_cpp_ofdm_mod.cpp",
+	"sci_cpp_pam_demod.cpp",
+	"sci_cpp_pam_mod.cpp",
+	"sci_cpp_qam_demod.cpp",
+	"sci_cpp_qam_mod.cpp",
+	"rc_get_pulse_shape.cpp",
+	"rc_set_pulse_shape.cpp",
+	"rc_shape_symbols.cpp",
+	"bch_dec.cpp",
+	//"conv_dec.cpp",
+	//"conv_enc.cpp",
+	//"despread.cpp",
+	//"spread.cpp",
+	//"rsdec.cpp",
+	//"rsenc.cpp",
+	],..
+    get_absolute_file_path("builder_gateway_cpp.sce"), [], "-litpp");
+
+endfunction
+
+builder_gw_cpp();
+clear builder_gw_cpp; // remove builder_gw_cpp on stack
