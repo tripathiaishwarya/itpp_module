@@ -32,13 +32,13 @@ function builder_gw_cpp()
 	"rc_set_pulse_shape","rc_set_pulse_shape";
 	"rc_shape_symbols","rc_shape_symbols";
 	"bch_dec","sci_bch_dec";
-	//"bch_enc","sci_bch_enc";
-	//"conv_dec","sci_conv_dec";
-	//"conv_enc","sci_conv_enc";
-	//"despread","sci_despread";
-	//"spread","sci_spread";
-	//"rsdec","sci_rsdec";
-	//"rsenc","sci_rsenc";
+	"bch_enc","sci_bch_enc";
+	"conv_dec","sci_conv_dec";
+	"conv_enc","sci_conv_enc";
+	"despread","sci_despread";
+	"spread","sci_spread";
+	"rsdec","sci_rsdec";
+	"rsenc","sci_rsenc";
 	],..
 	[
 	"itpp_berc_get_errors.cpp",
@@ -70,12 +70,13 @@ function builder_gw_cpp()
 	"rc_set_pulse_shape.cpp",
 	"rc_shape_symbols.cpp",
 	"bch_dec.cpp",
-	//"conv_dec.cpp",
-	//"conv_enc.cpp",
-	//"despread.cpp",
-	//"spread.cpp",
-	//"rsdec.cpp",
-	//"rsenc.cpp",
+	"bch_enc.cpp",
+	"conv_dec.cpp",
+	"conv_enc.cpp",
+	"despread.cpp",
+	"spread.cpp",
+	"rsdec.cpp",
+	"rsenc.cpp",
 	],..
     get_absolute_file_path("builder_gateway_cpp.sce"), [], "-litpp");
 

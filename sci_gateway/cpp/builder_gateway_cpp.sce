@@ -39,6 +39,8 @@ function builder_gw_cpp()
 	"spread","sci_spread";
 	"rsdec","sci_rsdec";
 	"rsenc","sci_rsenc";
+	"ext_golay_enc","sci_ext_golay_enc";
+	"ext_golay_dec","sci_ext_golay_dec";
 	],..
 	[
 	"itpp_berc_get_errors.cpp",
@@ -77,6 +79,8 @@ function builder_gw_cpp()
 	"spread.cpp",
 	"rsdec.cpp",
 	"rsenc.cpp",
+	"ext_golay_enc.cpp",
+	"ext_golay_dec.cpp",
 	],..
     get_absolute_file_path("builder_gateway_cpp.sce"), [], "-litpp");
 

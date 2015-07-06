@@ -1,0 +1,93 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>psk_mod</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="psk_demod.html">&lt;&lt; psk_demod</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_82d6a792eeab08a15ff7dbb082a2a045.html">ITPP Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="qam_demod.html">qam_demod &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">ITPP Toolbox</a> &gt;&gt; <a href="section_82d6a792eeab08a15ff7dbb082a2a045.html">ITPP Toolbox</a> &gt; psk_mod</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">psk_mod</h1>
+
+		<p class="refpurpose">PSK modulation</p></div>
+
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+
+		<div class="synopsis"><pre><span class="default">a</span><span class="default"> = </span><span class="functionid">psk_mod</span><span class="default">(</span><span class="default">b</span><span class="default">,</span><span class="default">c</span><span class="default">)</span></pre></div></div>
+	
+	<div class="refsection"><h3 class="title">Parameters</h3>
+
+		<dl><dt><span class="term">a:</span>
+				<dd><p class="para">output single dimension complex array.</p></dd></dt>      
+                         <dt><span class="term">b:</span>        
+				<dd><p class="para">input single dimension array of {0,1}.</p></dd></dt>   
+			<dt><span class="term">c:</span>        
+				<dd><p class="para">input integer that should be a power of 2.</p></dd></dt></dl></div>
+
+
+
+	<div class="refsection"><h3 class="title">Description</h3>
+
+		<p class="para">M-ary PSK modulator.</p>
+	
+		<p class="para">This function implements the M-ary PSK modulator with<span><img src='./_LaTeX_itpp_psk_mod.xml_1.png' style='position:relative;top:2px;width:56px;height:18px'/></span> constellation points, where <span><img src='./_LaTeX_itpp_psk_mod.xml_2.png' style='position:relative;top:6px;width:87px;height:20px'/></span>. The symbol numbering is counter clockwise starting from the real axis, i.e. symbol <span><img src='./_LaTeX_itpp_psk_mod.xml_3.png' style='position:relative;top:6px;width:40px;height:20px'/></span>. The bitmap is Gray encoded. The symbol energy is normalized to 1.</p>
+
+		<p class="para">It is expected that the user inputs a single dimension binary matrix of (0,1) and an integer m(power of 2) in scilab engine while calling the itpp_bpsk_mod() function and expect the function to return a single dimension complex matrix as output in scilab console.</p></div>
+
+	<div class="refsection"><h3 class="title">Examples</h3>
+
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">b</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">c</span><span class="scilaboperator">=</span><span class="scilabnumber">4</span><span class="scilabdefault">;</span>
+<span class="scilabid">a</span><span class="scilaboperator">=</span><span class="scilabid">psk_mod</span><span class="scilabopenclose">(</span><span class="scilabid">b</span><span class="scilabdefault">,</span><span class="scilabid">c</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+	<div class="refsection"><h3 class="title">Authors</h3>
+
+		<ul class="itemizedlist"><li class="member">Aishwarya Tripathi</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="psk_demod.html">&lt;&lt; psk_demod</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_82d6a792eeab08a15ff7dbb082a2a045.html">ITPP Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="qam_demod.html">qam_demod &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

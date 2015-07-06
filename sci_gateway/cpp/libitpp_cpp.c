@@ -42,6 +42,8 @@ extern Gatefunc sci_despread;
 extern Gatefunc sci_spread;
 extern Gatefunc sci_rsdec;
 extern Gatefunc sci_rsenc;
+extern Gatefunc sci_ext_golay_enc;
+extern Gatefunc sci_ext_golay_dec;
 static GenericTable Tab[]={
   {(Myinterfun)sci_gateway_without_putlhsvar,itpp_berc_get_errors,"berc_get_errors"},
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_berc_get_errorrate,"berc_get_errorrate"},
@@ -79,6 +81,8 @@ static GenericTable Tab[]={
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_spread,"spread"},
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_rsdec,"rsdec"},
   {(Myinterfun)sci_gateway_without_putlhsvar,sci_rsenc,"rsenc"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_ext_golay_enc,"ext_golay_enc"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,sci_ext_golay_dec,"ext_golay_dec"},
 };
  
 int C2F(libitpp_cpp)()

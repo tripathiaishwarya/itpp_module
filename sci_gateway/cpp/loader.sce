@@ -46,6 +46,8 @@ list_functions = [ 'berc_get_errors';
                    'spread';
                    'rsdec';
                    'rsenc';
+                   'ext_golay_enc';
+                   'ext_golay_dec';
 ];
 addinter(libitpp_cpp_path + filesep() + 'libitpp_cpp' + getdynlibext(), 'libitpp_cpp', list_functions);
 // remove temp. variables on stack

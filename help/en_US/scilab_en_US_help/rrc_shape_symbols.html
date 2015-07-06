@@ -1,0 +1,99 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>rrc_shape_symbols</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="rrc_get_pulse_shape.html">&lt;&lt; rrc_get_pulse_shape</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_82d6a792eeab08a15ff7dbb082a2a045.html">ITPP Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="seq_deinterleaver.html">seq_deinterleaver &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">ITPP Toolbox</a> &gt;&gt; <a href="section_82d6a792eeab08a15ff7dbb082a2a045.html">ITPP Toolbox</a> &gt; rrc_shape_symbols</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">rrc_shape_symbols</h1>
+
+		<p class="refpurpose">Root Raised Cosine shape symbols</p></div>
+
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+
+		<div class="synopsis"><pre><span class="default">a</span><span class="default"> = </span><span class="functionid">rrc_shape_symbols</span><span class="default">(</span><span class="default">b</span><span class="default">,</span><span class="default">c</span><span class="default">,</span><span class="default">d</span><span class="default">,</span><span class="default">e</span><span class="default">)</span></pre></div></div>
+	
+	<div class="refsection"><h3 class="title">Parameters</h3>
+
+		<dl><dt><span class="term">a:</span>
+				<dd><p class="para">Output pulse shape vector.</p></dd></dt>      
+			<dt><span class="term">b:</span>        
+				<dd><p class="para">Input symbols vec .</p></dd></dt>
+                         <dt><span class="term">c:</span>        
+				<dd><p class="para">Roll off factor(non zero).</p></dd></dt>   
+			<dt><span class="term">d:</span>        
+				<dd><p class="para">integer filter length.</p></dd></dt>  
+			<dt><span class="term">e:</span>        
+				<dd><p class="para">integer upsampling factor.</p></dd></dt></dl></div>
+
+
+
+	<div class="refsection"><h3 class="title">Description</h3>
+
+		<p class="para">Root Raised Cosine shape symbols</p>
+	
+		<p class="para">The function shape_symbols() shapes the the input symbols performing upsampling.</p>
+
+		<p class="para">It is expected that the user inputs input symbols vector, roll off factor, filter length and upsampling factor in scilab engine while calling the rrc_shape_symbols() function and expect the function to return pulse shape vector as output in scilab console.</p></div>
+
+	<div class="refsection"><h3 class="title">Examples</h3>
+
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">b</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilaboperator">-</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">c</span><span class="scilaboperator">=</span><span class="scilabnumber">0.5</span><span class="scilabdefault">;</span>
+<span class="scilabid">d</span><span class="scilaboperator">=</span><span class="scilabnumber">6</span><span class="scilabdefault">;</span>
+<span class="scilabid">e</span><span class="scilaboperator">=</span><span class="scilabnumber">8</span>
+<span class="scilabid">a</span><span class="scilaboperator">=</span><span class="scilabid">rrc_shape_symbols</span><span class="scilabopenclose">(</span><span class="scilabid">b</span><span class="scilabdefault">,</span><span class="scilabid">c</span><span class="scilabdefault">,</span><span class="scilabid">d</span><span class="scilabdefault">,</span><span class="scilabid">e</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+	<div class="refsection"><h3 class="title">Authors</h3>
+
+		<ul class="itemizedlist"><li class="member">Aishwarya Tripathi</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="rrc_get_pulse_shape.html">&lt;&lt; rrc_get_pulse_shape</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_82d6a792eeab08a15ff7dbb082a2a045.html">ITPP Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="seq_deinterleaver.html">seq_deinterleaver &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>
